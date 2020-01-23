@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "start": "run-p build-client start-app",
+    "start": "npm run build-client & node index.js",
     "dev": "run-p dev-client nodemon",
     "dev-peer": "cross-env GENERATE_PEER_PORT='true' ENV='development' nodemon index.js",
     "build-client": "parcel build client/src/index.html --out-dir client/dist",
